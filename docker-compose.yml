@@ -11,7 +11,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
     volumes:
-      - ./mongodata:/data/db
+      - mongodata:/data/db
 
   mongo-express:
     image: mongo-express
@@ -35,3 +35,6 @@ services:
     expose:
       - "3000"
     command: sh -c "npm install && npm start"
+
+volumes:
+  mongodata:
