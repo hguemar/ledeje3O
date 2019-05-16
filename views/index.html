@@ -1,5 +1,9 @@
 doctype html 
 head
-  title XXX
+  title Accueil du blog
 body
-  Hello world
+  each doc in data
+    p #{doc.titre} - écrit par #{doc.auteur}
+    p #{doc.date}
+    p #{doc.contenu}
+    a(href="/post/" + doc._id) Supprimer
