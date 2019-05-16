@@ -5,6 +5,7 @@
 
 * Faire un npm install pour avoir les dépendances.
 * npm start puis rdv sur http://localhost:8000/ 
+* pour générer des données rdv sur http://localhost:8000/generate
 
 ## Réponses aux questions 
 ### Afficher la liste des articles

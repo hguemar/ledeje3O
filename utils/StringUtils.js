@@ -4,4 +4,9 @@ module.exports = class StringUtils {
     {
         return typeof field != 'undefined';
     }
+
+    static summarize(text)
+    {
+        return text.substr(0, 140) + "...";
+    }
 }

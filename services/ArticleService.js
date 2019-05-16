@@ -21,11 +21,15 @@ module.exports = class ArticleService {
         return Promise.reject();
     }
 
+    saveArticle(app, titreData, contenuData, auteurData) {
+        let doc = { titre: titreData, contenu: contenuData, date: new Date(), auteur: auteurData };
+        return app.db.collection("article").insertOne(doc);
+    }
+
     deleteArticle(app, req) {
         let id = req.params.id;
-        if ( StringUtils.isDefined(id))
-        {
-            return app.db.collection("article").deleteOne( { "_id": ObjectID(id) } );
+        if (StringUtils.isDefined(id)) {
+            return app.db.collection("article").deleteOne({ "_id": ObjectID(id) });
         }
         return Promise.reject();
     }
