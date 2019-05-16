@@ -4,8 +4,7 @@
   "description": "xxx",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "watch": "nodemon ./bin/www",
+    "start": "nodemon server.js",
     "test": "mocha tests/*"
   },
   "keywords": [
