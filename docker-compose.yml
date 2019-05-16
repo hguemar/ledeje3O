@@ -32,4 +32,4 @@ services:
       - ./workspace/myapp:/home/node/app
     expose:
       - "3000"
-    command: "npm start"
+    command: "npm watch"

@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "watch": "nodemon ./bin/www",
     "test": "mocha tests/*"
   },
   "keywords": [
@@ -17,9 +18,9 @@
     "chai": "^4.2.0",
     "consolidate": "^0.15.1",
     "express": "^4.16.4",
-    "mocha": "^5.2.0",
+    "mocha": "^6.1.4",
     "mongodb": "^3.2.4",
     "pug": "^2.0.3",
-    "supertest": "^3.4.2"
+    "supertest": "^4.0.2"
   }
 }
