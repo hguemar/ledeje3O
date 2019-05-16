@@ -1,13 +1,32 @@
 ObjectID = require('mongodb').ObjectID;
+bodyParser = require('body-parser');
 
 module.exports = function(app) {
-  app.get("/post/create", function(req, res) {
+
+  app.use( bodyParser.json() );       // to support JSON-encoded bodies
+  app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+    extended: true
+  }));
+
+  app.get("/post/create", function(res) {
     //Render form
     res.render("createArticle");
   });
 
   app.post("/post/create", function(req, res) {
     //Execute CRUD operation to Create article in MongoDB
+    var article = {
+      "_id": ObjectID(),
+      title: req.body.title,
+      content: req.body.content,
+      author: req.body.author,
+      date: new Date()
+    };
+    app.db.collection("articles").insertOne(article, function (err) {
+      if (err) throw err;
+      console.log("Article created");
+    });
+
     res.send("Article created");
   });
 
