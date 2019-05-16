@@ -3,9 +3,8 @@ var fixtures = require("./fixtures");
 
 module.exports = function(app) {
 
-  app.get("/:page", function(req, res) {
+  app.get("/", function(req, res) {
 
-      var page = req.params.page;
       app.db.collection("articles").find().sort({date: -1}).toArray().then(function(result) {
 
           var length = result.length;
