@@ -1,4 +1,5 @@
 var posts = require("./posts");
+var fixtures = require("./fixtures");
 
 module.exports = function(app) {
 
@@ -8,4 +9,5 @@ module.exports = function(app) {
 
   // Register posts endpoint
   posts(app);
-}
+  fixtures(app);
+};
