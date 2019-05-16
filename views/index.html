@@ -1,5 +1,10 @@
 doctype html 
 head
-  title Blog
+  title XXX
 body
   p Hello world
+  ul
+    for article in #{result}
+        li= article.title
+    else
+        li error
