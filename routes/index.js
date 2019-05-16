@@ -3,14 +3,12 @@ var fixtures = require("./fixtures");
 
 module.exports = function(app) {
 
-
   app.get("/", function(req, res){
     res.redirect("/1");
   });
 
   app.get("/:page", function(req, res) {
 
-      var page = req.params.page;
       app.db.collection("articles").find().sort({date: -1}).toArray().then(function(result) {
 
           var length = result.length / 5;
