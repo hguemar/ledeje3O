@@ -1,5 +1,16 @@
 doctype html 
 head
-  title Blog
+  title XXX
 body
-  p Hello world
+  h1= "Welcome to Alexandre Laurans and Julien Haensler's blog"
+  ul
+    each article, index in result
+        h1= article.title
+        p= article.content
+        br
+        p= article.author
+        p= article.date
+        br
+        a(class='button' href='post/' + article._id) Read the article
+        hr
+        br
