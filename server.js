@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var cons = require('consolidate');
 
 var app = express();
-var url = process.env.URL || "mongodb://mongo:27017";
+var url = process.env.URL || "mongodb://root:root@mongo:27017";
 var dbName = process.env.DBNAME || "blog";
 var port = process.env.PORT || 3000;
 
