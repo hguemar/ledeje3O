@@ -1,0 +1,17 @@
+doctype html
+head
+  title Ajout d'un article
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+body
+  div.container
+   form(action='/post/create', method='POST')
+    h1 Ajout d'un nouvel article
+    p Titre de l'article 
+      input(type="text", name="titre")
+    p Contenu 
+      textarea(name="contenu" rows="5") 
+    p Auteur 
+      input(type="text", name="auteur")
+    p 
+      input(type="submit", value="Enregistrer")
+      a(href="/") Retour à l'accueil

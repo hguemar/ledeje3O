@@ -1,0 +1,12 @@
+doctype html 
+head
+  title Détail de l'article
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+body
+  div.container
+    p #{doc.titre} - écrit par #{doc.auteur}
+    p #{doc.date}
+    p #{doc.contenu}
+    a(href="/") Retour à l'accueil
+    br
+    a(href="/post/delete/" + doc._id) Supprimer l'article

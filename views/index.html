@@ -1,5 +1,17 @@
 doctype html 
 head
-  title XXX
+  title Accueil du blog
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+
 body
-  Hello world
+  div.container
+   a(href="/post/create") Ajouter un article
+   br
+   br
+   each doc in data
+     h1 #{doc.titre}
+     h5 écrit par #{doc.auteur} le #{doc.date}
+     p.font-italic #{doc.contenu}
+     a(href="/post/" + doc._id) Voir le détail
+     br
+     br
