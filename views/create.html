@@ -1,0 +1,17 @@
+doctype html
+head
+	title Creation d'un article
+body
+	h1 Ajout d'un article
+	form(action="/post/create", method="POST")
+		p Titre :
+		input(type="text", name="titre")
+		br
+		p Contenu :
+		textarea(name="contenu")
+		br
+		p Auteur : 
+		input(type="text", name="auteur")
+		br
+		br
+		input(type="submit", value="Créer article")

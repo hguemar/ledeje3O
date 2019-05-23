@@ -1,0 +1,10 @@
+doctype html
+head
+	title Article
+body
+	h5 #{article.titre}, écrit par #{article.auteur}
+	p #{article.date}
+	br
+	p #{article.contenu}
+	br
+	a(href="/post/delete/" + article.id) Supprimer cet article
