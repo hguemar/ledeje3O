@@ -1,1 +1,1 @@
-Projet réalisé par Manuel PICON BRAVO : manuel.piconbravo@etu.univ-lyon1.fr
+Projet réalisé par Manuel PICON BRAVO : manuel.picon-bravo@etu.univ-lyon1.fr
