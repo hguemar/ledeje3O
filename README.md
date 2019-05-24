@@ -13,7 +13,7 @@ Quel verbe HTTP utiliser ?
 **Le verbe GET**
 
 
-## Afficher un article
+## Entrer un article
 
 Le formulaire devra enclencher une action sur la même route, quel verbe HTTP utiliser?
 **POST**
