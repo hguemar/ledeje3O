@@ -1,5 +1,5 @@
 # TD Basic Blog
-
+**Adim & Adel BENTAKOUKA**
 ## Objectifs
 
 Vous devrez réaliser une application web à l'aide du framework express (ou autre),
@@ -20,7 +20,7 @@ Bien évidemment, les tests devront passer et il faudra ajouter au moins un test
 
 ## Modélisation des données
 
-Définir le schéma de la base en quelques phrases, avec un exemple d'entrée au format JSON. 
+Définir le schéma de la base en quelques phrases, avec un exemple d'entrée au format JSON.
 Écrire un script permettant de remplir la base avec des données générées aléatoirement.
 
 _Note: il faudra un identifiant unique pour chaque article !_
@@ -35,6 +35,7 @@ La page devra s'afficher à la route `*/*`
 
 
 Quel verbe HTTP utiliser ?
+**Le verbe GET**
 
 ## Afficher un article
 
@@ -44,12 +45,13 @@ Faire en sorte qu'un article avec l'identifiant unique ID s'affiche à la route 
 
 Créer un formulaire pour taper un article sur la route `*/post/create*`
 Le formulaire devra enclencher une action sur la même route, quel verbe HTTP utiliser?
+**POST**
 
 
 ## Supprimer un article
 
 Ajouter une route `*/post?<ID>>*` pour supprimer un article, quel verbe HTTP utiliser.`
-
+**GET**
 ## Permettre la suppression d'un article
 
 Ajouter un lien cliquable en bas de l'article permettant de supprimer l'article.
@@ -82,4 +84,3 @@ Vous serez noté, en fonction:
 * de la méthode de travail (versionning, tests, etc.)
 * de la conception
 * bonus pour la prise de risque (utilisation de technos différentes, petits plus)
-

@@ -5,7 +5,7 @@ var assert = require("chai").assert;
 describe("test blog index endpoint", function() {
   it("should have content-type text/html", function(done) {
     supertest(app)
-      .get("/")
+      .get("/1")
       .set("User-Agent", "API testing")
       .expect("Content-Type", "text/html; charset=utf-8")
       .expect(200)
@@ -13,7 +13,7 @@ describe("test blog index endpoint", function() {
   });
   it("should have title \"Simple Blog\"", function(done) {
       supertest(app)
-      .get("/")
+      .get("/1")
       .set("User-Agent", "API testing")
       .expect(function(res) {
         assert(res.text.includes("<title>Simple Blog</title>"));

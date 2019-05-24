@@ -4,7 +4,7 @@
   "description": "xxx",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "test": "mocha tests/*"
   },
   "keywords": [
@@ -14,11 +14,13 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bson-ext": "^2.0.2",
     "chai": "^4.2.0",
     "consolidate": "^0.15.1",
     "express": "^4.16.4",
     "mocha": "^6.1.4",
     "mongodb": "^3.2.4",
+    "nodemon": "^1.19.0",
     "pug": "^2.0.3",
     "supertest": "^4.0.2"
   }

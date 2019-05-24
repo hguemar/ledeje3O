@@ -1,0 +1,23 @@
+doctype html
+head
+  title Simple Blog
+  link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  link(type='text/css',media='screen,projection', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+body
+  nav
+    .nav-wrapper
+      a.brand-logo.center(href='#') Simple Blog
+      ul#nav-mobile.left.hide-on-med-and-down
+        li
+          a(href="/") Retour
+  br
+  div.row
+      div.card.col.s11
+        div.card-content
+          span.card-title= data.title
+          p= data.body
+          p(align='right')= data.date
+          b
+            p(align='right')= data.author
+        div.card-action
+          a(href="/post/delete/"+data._id) Supprimer l'article
