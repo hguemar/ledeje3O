@@ -1,5 +1,16 @@
 doctype html 
 head
-  title XXX
+  title Simple Blog
 body
-  Hello world
+  each res in result
+    h2 #{res.title} à été ecrit le #{res.date} par #{res.author}. 
+    h3 Résumé : #{res.body}
+    br
+    a(href="/post/" + res._id) Détail
+    br
+    a(href="/post/delete/" + res._id) Supprimer
+  br
+  a(href="/post/create") Ajout
+    
+    
+    

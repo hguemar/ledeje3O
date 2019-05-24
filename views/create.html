@@ -1,0 +1,22 @@
+doctype html 
+head
+  title Ajout Article
+body
+  form(method='POST' action='/post/create')
+    h2 Titre
+    input(type="text", name="title")
+    h2 Date
+    input(type="text", name="date")
+    h2 Auteur
+    input(type="text", name="author")
+    h2 Contenu
+    input(type="text", name="body")
+    button(type="submit") Ajout
+    br
+    a(href="/") Retour
+
+  if created == true
+    h2 Ajout effectué
+  
+    
+    
