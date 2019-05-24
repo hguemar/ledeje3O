@@ -1,0 +1,23 @@
+doctype html
+head
+  title Simple Blog
+  link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  link(type='text/css',media='screen,projection', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+body
+  nav
+    .nav-wrapper
+      a.brand-logo.center(href='#') Simple Blog
+      ul#nav-mobile.left.hide-on-med-and-down
+        li
+          a(href="/") Retour
+  br
+  div.row
+    div.card.col.s6
+      div.card-content
+        form(action='/post/create', method='POST')
+          span.card-title Créer un article.
+          input(placeholder="Titre de l'article" id='title' type='text' class='validate' name="title")
+          textarea(placeholder="Contenu de l'article" name="body",class='materialize-textarea' height='6rem')
+          input(placeholder="Auteur" id='author' type='text' class='validate' name="author")
+          button(type='submit' name='action' class='btn waves-effect waves-light') Valider
+            i.material-icons.right send
