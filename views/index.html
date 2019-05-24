@@ -2,9 +2,12 @@ doctype html
 head
 	title Blog
 body
+	h1 Bienvenue sur le blog	
+	br
 	a(href="/post/create") Créer un article
+	br
 	each article in data
-		h1 #{article.titre}
+		h2 #{article.titre}
 		h4 Auteur : #{article.auteur}, écrit le #{article.date}
 		p #{article.contenu}
 		a(href="/post/" + article.id) Article entier
