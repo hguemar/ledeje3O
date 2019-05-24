@@ -3,9 +3,10 @@ var MongoClient = require("mongodb");
 var bodyParser = require('body-parser')
 var cons = require('consolidate');
 
+
 var app = express();
-var url = process.env.URL || "REPLACEME";
-var dbName = process.env.DBNAME || "REPLACEME";
+var url = process.env.URL || "mongodb://127.0.0.1";
+var dbName = process.env.DBNAME || "blog";
 var port = process.env.PORT || 8000;
 
 app.engine('html', cons.pug);
@@ -19,7 +20,7 @@ MongoClient.connect(url, function(err, client) {
   if(err) throw err;
 
   routes(app);
-  
+
   app.client = client;
   app.db = client.db(dbName);
 

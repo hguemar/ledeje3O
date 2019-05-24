@@ -1,5 +1,33 @@
-doctype html 
+doctype html
 head
-  title XXX
+  title Simple Blog
+  link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  link(type='text/css',media='screen,projection', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
 body
-  Hello world
+  nav
+    .nav-wrapper
+      a.brand-logo.center(href='#') Simple Blog
+      ul#nav-mobile.left.hide-on-med-and-down
+        li
+          a(href='/post/create') Créer un article
+  br
+  div.row
+    each idx in data
+        div.col.s6
+          div.card
+            div.card-content
+              span.card-title= idx.title
+              p= idx.body
+              p(align='right')= idx.date
+              b
+                p(align='right')= idx.author
+            div.card-action
+              a(href='/Article/'+idx._id) Voir le contenu
+    ul.pagination.col.s12.center-align
+      li.waves-effect
+        a(href='/page/'+(currentPage-1))
+          i.material-icons chevron_left
+      li.waves-effect
+        a(href='/page/'+(+currentPage+1))
+          i.material-icons chevron_right
+
