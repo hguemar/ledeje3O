@@ -21,6 +21,8 @@ On a une seule collection d'articles :
 * date : date d'écriture de l'article
 * contenu : contenu de l'article
 
+Le dump de la base est disponible dans le dossier dump
+
 ## Routes
 * On affiche les données avec une requête GET sur la route */*
 * On affiche les données avec une requête GET sur la route */post/<ID>*
