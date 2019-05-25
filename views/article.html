@@ -1,0 +1,17 @@
+doctype html 
+head
+  title Détails - #{result.title}
+  style
+    include css/article.css
+body
+  h2 #{result.title}
+
+  h4 L'article : #{result.title} à été écrit par #{result.author} le #{result.date} .
+
+  p Nom de l'article : #{result.title}
+  p Auteur de l'article : #{result.author}
+  p Date de l'article : #{result.date}
+  p Contenu de l'article : #{result.body}
+
+  button
+    a(href="/") Retour vers la liste des articles
