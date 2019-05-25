@@ -1,0 +1,14 @@
+doctype html 
+head
+  title Detail Article
+body
+    h2 #{result.title} à été ecrit le #{result.date} par #{result.author}. 
+    h3 Contenu : #{result.body}
+    br
+    a(href="/post/delete/" + result._id) Supprimer
+    br
+    a(href="/") Retour
+
+    
+    
+    
