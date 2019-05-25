@@ -1,5 +1,32 @@
 doctype html 
 head
-  title XXX
+  title Basic Blog
+  style
+      include css/index.css
 body
-  Hello world
+  h2 Liste des articles
+  table
+    thead
+      tr
+        th Articles
+        th Auteur
+        th Date
+        th Resumé
+        th Détails
+        th Retirer
+    tbody
+      each res in result
+        tr
+          td #{res.title}
+          td #{res.author}
+          td #{res.date}
+          td #{res.body}
+          td
+            a(href="/post/" + res._id)
+              img(src="https://img.icons8.com/color/40/000000/search.png")
+          td
+            a(href="/post/delete/" + res._id)
+              img(src="https://img.icons8.com/color/40/000000/cancel.png")
+  br
+  button 
+    a(href="/post/create") Ajouter un nouvel article 

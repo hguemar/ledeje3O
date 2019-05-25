@@ -1,0 +1,27 @@
+doctype html 
+head
+  title Ajouter un article
+  style
+    include css/create.css
+body
+  h2 Ajouter un article
+  form(method='POST' action='/post/create')
+    p Titre : 
+      input(type="text", name="title")
+    p Date : 
+      input(type="text", name="date")
+    p Auteur : 
+      input(type="text", name="author")
+    p Contenu : 
+      input(type="text", name="body")
+    p
+      button(type="submit") Ajouter l'article
+    p
+      button
+        a(href="/") Retour vers la liste des articles
+
+  if created == true
+    h2 Article crée !
+  
+    
+    
